@@ -1,6 +1,36 @@
 *{
   box-sizing: border-box;
 }
+.example-1::before{
+  content:"HELLO!"
+} 
+.example-1::after{
+  content:"BYE!"
+}
+.example-2::before{
+  content:"🌹";
+}
+.example-2::after{
+  content:"✨";
+
+
+  font-weight: 700;
+}
+.example-3::before{
+  content:"😍";
+}
+.example-3::after{
+  content:"😘";
+}
+
+
+
+
+
+
+
+
+
 .popover{
   position:relative ;
 }
@@ -27,8 +57,38 @@ border-bottom: 10px solid  rgb(252, 252, 42);
 border-left: 10px solid transparent;
 border-right: 10px solid transparent;
 
-
-
 position: absolute;
 top:-10px;
+}
+
+[data-popover]{
+  position:relative ;
+}
+[popover-content]::after{
+content: attr(data-popover);
+box-shadow: 0 0 10px black;
+padding: 15px;
+border-radius: 10px;
+background-color: chartreuse;
+position: absolute;
+left: 0;
+top: 35px;
+display: none;
+
+}
+[data-popover]::before{
+  content:" ";
+ height: 10px;
+ width: 20px;
+ border-bottom: 10px solid  rgb(252, 252, 42);
+ border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+position: absolute;
+top: 25px;
+left: 0;
+display: none;
+}
+[data-popover]:focus::after,
+[data-popover]:focus::before{
+  display: block;
 }
