@@ -8,13 +8,37 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<p class="example-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, non obcaecati dolorem laborum numquam dignissimos nostrum praesentium aperiam consequatur reprehenderit architecto laudantium voluptatem laboriosam quas illum nesciunt fugiat soluta deserunt.</p>
+<p class="example-2">Eos, laborum sapiente soluta fugit beatae hic exercitationem adipisci possimus ipsam velit suscipit non! Velit laborum dignissimos maiores saepe illo consectetur impedit ab perspiciatis, hic veniam, libero repellat tempore nesciunt?</p>
+<p class="example-3">Nam, debitis, architecto cumque quam tenetur consectetur molestiae voluptate pariatur, sed voluptatem nihil. Officia itaque laudantium laborum eum praesentium aliquid aspernatur, quae unde, quos consectetur commodi debitis ducimus dolorum. Ex.</p>
+
+
  <div class="popover">
   <button class="popover-trigger">
     Add to card
   </button>
-  <div class="popover-content">
+  <div class="popover-content ">
+    <span></span>
     This item costs <strong>$50</strong>
   </div>
   </div>
+  <div class="popover">
+    <a href="#" class="popover-trigger">
+     Remove from cart
+    </a>
+    <div class="popover-content ">
+      <span></span>
+      This removes from cart.
+    </div>
+    </div>
+
+
+    <button data-popover="This item costs $50">
+      Add to cart
+    </button>
+
+    <a href="#" data-popover="This removes item from cart">
+    Remove from cart   
+    </a>
 </body>
 </html>
